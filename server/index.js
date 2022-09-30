@@ -4,7 +4,6 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/authRoutes");
 
-
 const corsOptions = {
   origin: "http://localhost:3000/",
   credentials: true,
@@ -39,7 +38,7 @@ const io = require("socket.io")(httpServer);
 const Port = process.env.Port || 5000;
 
 const mongoDB =
-  "mongodb+srv://jkabore1:comptedeDieu1@cluster0.lppsu3o.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://lppsu3o.mongodb.net/?retryWrites=true&w=majority";
 mongoose
   .connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("connected"))
